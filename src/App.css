@@ -38,4 +38,12 @@ body {
 }
 .editor-container.collapsed .CodeMirror-scroll{
   position: absolute;
+  overflow: hidden !important;
+}
+
+.btn-styles {
+  margin-left: .5rem;
+  background:none;
+  border :none ;
+  color :pointer;
 }
