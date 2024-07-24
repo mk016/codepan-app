@@ -9,6 +9,7 @@ body {
 .pane {
   height: 50vh;
   display: flex;
+  flex: 1; /* Ensure it takes the remaining space */
 }
 
 .editor-container {
@@ -36,14 +37,21 @@ body {
   flex-grow: 1;
   overflow: hidden;
 }
-.editor-container.collapsed .CodeMirror-scroll{
-  position: absolute;
-  overflow: hidden !important;
+
+.editor-container.collapsed .CodeMirror {
+  display: none; /* Hide the CodeMirror editor when collapsed */
 }
 
 .btn-styles {
-  margin-left: .5rem;
-  background:none;
-  border :none ;
-  color :pointer;
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer; /* Fix typo */
+  color: white; /* Add color for the button text */
+}
+
+.iframe-no-border {
+  border: 0;
+  width: 100%;
+  height: 100%;
 }
