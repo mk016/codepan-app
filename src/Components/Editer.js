@@ -25,6 +25,7 @@ const Editor = ({ displayName , language , value, onChange }) => {
         options={{
           lineWrapping:true,
           lint:true,
+          theme:'material',
           mode: language
         }}
        
