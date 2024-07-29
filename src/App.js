@@ -7,21 +7,21 @@ function App() {
   const [html, setHtml] = useState('');
   const [css, setCss] = useState('');
   const [js, setJs] = useState('');
-  const  [srcDoc , setSrcDoc ] = useState('')
+  const [srcDoc, setSrcDoc] = useState('');
 
   useEffect(() => {
-    const timeout = setTimeout (() => {
-      srcDoc = (`
-      <html>
-        <body>${html}</body>
-        <style>${css}</style>
-        <script>${js}</script>
-      </html>
-    `)
-        return () => clearTimeout(timeout)
-    },250)
-  } , [html , css , js ])
+    const timeout = setTimeout(() => {
+      setSrcDoc(`
+        <html>
+          <body>${html}</body>
+          <style>${css}</style>
+          <script>${js}</script>
+        </html>
+      `);
+    }, 250);
 
+    return () => clearTimeout(timeout);
+  }, [html, css, js]);
 
   return (
     <>
